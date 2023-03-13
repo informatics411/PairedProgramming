@@ -1,0 +1,5 @@
+/Users/1150Coding/Desktop/ElevenFiftyProjects/codingFoundations/assignments/PairedProgramming1/PairedProgramming1/obj/Debug/net6.0/PairedProgramming1.csproj.AssemblyReference.cache
+/Users/1150Coding/Desktop/ElevenFiftyProjects/codingFoundations/assignments/PairedProgramming1/PairedProgramming1/obj/Debug/net6.0/PairedProgramming1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/1150Coding/Desktop/ElevenFiftyProjects/codingFoundations/assignments/PairedProgramming1/PairedProgramming1/obj/Debug/net6.0/PairedProgramming1.AssemblyInfoInputs.cache
+/Users/1150Coding/Desktop/ElevenFiftyProjects/codingFoundations/assignments/PairedProgramming1/PairedProgramming1/obj/Debug/net6.0/PairedProgramming1.AssemblyInfo.cs
+/Users/1150Coding/Desktop/ElevenFiftyProjects/codingFoundations/assignments/PairedProgramming1/PairedProgramming1/obj/Debug/net6.0/PairedProgramming1.csproj.CoreCompileInputs.cache
