@@ -1,11 +1,13 @@
 // namespace _Rock_Paper_Scissor 
 // {
-    public class Hello
+
+    public class GameStartUI
     {
+        
+            private RPSRepository _accessKey = new RPSRepository();
         public void RPS()
         {
-            int userScore = 0;
-            int computerScore = 0;
+
             string keepPlaying = "";
             System.Console.WriteLine("Lets Play rock paper scissors!");
 
@@ -30,28 +32,28 @@
                 }
                 if (userInput == "rock" && number == 2)
                 {
-                    // user loses
-                    // computer score +=1
+                    _accessKey.PlusComputerScore();
+                    _accessKey.UserRockComputerPaper();
                 } else if (userInput == "rock" && number == 3)
                 {
-                    // user wins
-                    // user score +=1
+                    _accessKey.PlusUserScore();
+                    _accessKey.UserRockComputerScissors();
                 } else if (userInput == "paper" && number == 1)
                 {
-                    // user wins
-                    // user score +=1
+                    _accessKey.PlusUserScore();
+                    _accessKey.UserPaperComputerRock();
                 } else if (userInput == "paper" && number == 3)
                 {
-                    // user loses
-                    // computer score +=
+                    _accessKey.PlusComputerScore();
+                    _accessKey.UserPaperComputerScissors();
                 } else if (userInput == "scissors" && number == 1)
                 {
-                    // user loses
-                    // computer score +=1
+                    _accessKey.PlusComputerScore();
+                    _accessKey.UserScissorsComputerRock();
                 } else if (userInput == "scissors" && number == 2)
                 {
-                    // user wins
-                    // user score +=1
+                    _accessKey.PlusUserScore();
+                    _accessKey.UserScissorsComputerPaper();
                 } else 
                 {
                     System.Console.WriteLine("It's a tie!");
@@ -59,12 +61,55 @@
 
                 System.Console.WriteLine("Do you want to keep playing? (yes/no)");
                 keepPlaying = Console.ReadLine().ToLower();
+                Console.Clear();
+                System.Console.WriteLine("User Score:" + userScore);
+                System.Console.WriteLine("Computer Score:" + computerScore);
             }
-
-            System.Console.WriteLine("User Score:" + userScore);
-            System.Console.WriteLine("Computer Score:" + computerScore);
-            Console.Clear();
         }
     }
-// }
+        public class RPSRepository
+        {
+            int userScore = 0;
+            int computerScore = 0;
+
+            public void PlusUserScore()
+            {
+                userScore += 1;
+            }
+
+            public void PlusComputerScore()
+            {
+                computerScore += 1;
+            }
+            public void UserRockComputerPaper()
+            {
+                System.Console.WriteLine("Paper beats rock, You lose!");
+            }
+
+            public void UserRockComputerScissors()
+            {
+                System.Console.WriteLine("Rock beats scissors, you win!");
+            }
+
+            public void UserPaperComputerRock()
+            {
+                System.Console.WriteLine("Paper beats rock, You win!");
+            }
+
+            public void UserPaperComputerScissors()
+            {
+                System.Console.WriteLine("Scissors beats paper, You lose!");
+            }
+
+            public void UserScissorsComputerRock()
+            {
+                System.Console.WriteLine("Rock beats scissors, You lose!");
+            }
+
+            public void UserScissorsComputerPaper()
+            {
+                System.Console.WriteLine("Scissors beats paper, You win!");
+            }
+        }
+
 

@@ -5,7 +5,7 @@
 
 //Socalled Scoring Class
 System.Console.WriteLine("Hello");
-Hello ui = new Hello();
+GameStartUI ui = new GameStartUI();
 ui.RPS();
 
 // }
