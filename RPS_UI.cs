@@ -62,15 +62,15 @@
                 System.Console.WriteLine("Do you want to keep playing? (yes/no)");
                 keepPlaying = Console.ReadLine().ToLower();
                 Console.Clear();
-                System.Console.WriteLine("User Score:" + userScore);
-                System.Console.WriteLine("Computer Score:" + computerScore);
+                System.Console.WriteLine("User Score:" + RPSRepository.userScore);
+                System.Console.WriteLine("Computer Score:" + RPSRepository.computerScore);
             }
         }
     }
         public class RPSRepository
         {
-            int userScore = 0;
-            int computerScore = 0;
+            static public int userScore = 0;
+            static public int computerScore = 0;
 
             public void PlusUserScore()
             {
@@ -80,6 +80,11 @@
             public void PlusComputerScore()
             {
                 computerScore += 1;
+            }
+            public void UserComputerComparison(int userChoice, int computerChoice)
+            {
+                string result = $"{userChoice} beats {computerChoice}";
+                new competitionResult = result, userScore, computerScore;
             }
             public void UserRockComputerPaper()
             {
